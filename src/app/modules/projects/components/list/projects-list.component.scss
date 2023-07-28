@@ -5,6 +5,7 @@
 .projects-list {
   border: solid 2px rgba(128, 128, 128, 0.404);
   height: 50%;
+  overflow-y: scroll;
 
   &_item {
     display: flex;

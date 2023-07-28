@@ -9,15 +9,9 @@ import localeRu from '@angular/common/locales/ru';
 
 registerLocaleData(localeRu, 'ru');
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SharedModule,
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [{ provide: LOCALE_ID, useValue: 'ru' }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

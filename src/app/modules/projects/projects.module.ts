@@ -8,14 +8,18 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-    {path: '', component: ProjectsComponent},
-    {path: ':id', component: ProjectsComponent},
-]
+  { path: '', component: ProjectsComponent },
+  { path: ':id', component: ProjectsComponent },
+];
 
 @NgModule({
-  declarations: [ProjectsComponent, ProjectsListComponent, ProjectInfoComponent],
+  declarations: [
+    ProjectsComponent,
+    ProjectsListComponent,
+    ProjectInfoComponent,
+  ],
   imports: [RouterModule.forChild(routes), CommonModule, FormsModule],
   providers: [ProjectService],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class ProjectsModule { }
+export class ProjectsModule {}

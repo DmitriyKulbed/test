@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-data-insert',
@@ -8,11 +9,17 @@ import { DataService } from '../../services/data.service';
 })
 export class DataInsertComponent {
   JSONText = '';
-  constructor(public dataService: DataService) {}
+  constructor(public dataService: DataService, private router: Router) {}
 
   saveData(): void {
     if (!this.JSONText) return;
 
-    this.dataService.save(this.JSONText);
+    try {
+      JSON.parse(this.JSONText);
+      this.dataService.save(this.JSONText);
+      this.router.navigate(['/projects']);
+    } catch {
+      alert('Невалидный формат данных');
+    }
   }
 }
