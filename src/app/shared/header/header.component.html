@@ -1,0 +1,10 @@
+<div class="header">
+    <span 
+    *ngFor="let route of routes" 
+    [routerLink]="route.path"
+    routerLinkActive="header_item_selected"
+    class="header_item"
+    >
+        {{route.title}}
+    </span>
+</div>

@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+button {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  background-color: rgba(128, 128, 128, 0.404);
+  border: none;
+  margin: 20px;
+  align-self: center;
+  color: white;
+  cursor: pointer;
+
+  &:active {
+    background-color: rgba(128, 128, 128, 0.603);
+  }
+}

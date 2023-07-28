@@ -1,0 +1,44 @@
+:host {
+    flex: 2;
+    padding-left: 100px;
+    margin: 0 auto;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width: 100%;
+
+    &_subject {
+        width: fit-content;
+        font-size: 25px;
+    }
+
+    &_text {
+        display: flex;
+        gap: 40px;
+        width: 50%;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        &_item {
+            display: flex;
+            flex-direction: column;
+            word-wrap: break-word;
+            .title {
+                margin-bottom:5px;
+                color:rgba(128, 128, 128, 0.7);
+            }
+
+            &:last-child {
+                flex-basis: 60%;
+            }
+        }
+    }
+
+    &_actions {
+        width: fit-content;
+    }
+}

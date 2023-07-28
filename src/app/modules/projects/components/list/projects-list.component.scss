@@ -1,0 +1,37 @@
+:host {
+  flex: 1;
+}
+
+.projects-list {
+  border: solid 2px rgba(128, 128, 128, 0.404);
+  height: 50%;
+
+  &_item {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: solid 2px rgba(128, 128, 128, 0.404);
+
+    &_date {
+      font-size: 12px;
+      color: rgba(128, 128, 128, 0.651);
+    }
+
+    &_subject {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    &_author {
+      font-size: 12px;
+      color: rgba(128, 128, 128, 0.651);
+      align-self: flex-end;
+    }
+  }
+
+  .selected {
+    background-color: rgba(128, 128, 128, 0.158);
+  }
+}

@@ -1,0 +1,35 @@
+<div *ngIf="project" class="project-info">
+  <div class="project-info_subject">
+    <span *ngIf="!isEdit">{{ project.subject }}</span>
+    <input *ngIf="isEdit" [(ngModel)]="changedProject.subject" />
+  </div>
+
+  <div class="project-info_text">
+    <div class="project-info_text_item">
+      <span class="title">Дата начала</span>
+      <span *ngIf="!isEdit">{{ project.startDate | date }}</span>
+      <input *ngIf="isEdit" [(ngModel)]="changedProject.startDate" />
+    </div>
+    <div class="project-info_text_item">
+      <span class="title">Дата окончания</span>
+      <span *ngIf="!isEdit">{{ project.endDate | date }}</span>
+      <input *ngIf="isEdit" [(ngModel)]="changedProject.endDate" />
+    </div>
+    <div class="project-info_text_item">
+      <span class="title">Автор</span>
+      <span *ngIf="!isEdit">{{ project.createdBy }}</span>
+      <input *ngIf="isEdit" [(ngModel)]="changedProject.createdBy" />
+    </div>
+    <div class="project-info_text_item">
+      <span class="title">Описание</span>
+      <span *ngIf="!isEdit">{{ project.description }}</span>
+      <input *ngIf="isEdit" [(ngModel)]="changedProject.description" />
+    </div>
+  </div>
+
+  <div class="project-info_actions">
+    <button *ngIf="!isEdit" (click)="changeEditMode(true)">Изменить</button>
+    <button *ngIf="isEdit" (click)="save()">Сохранить</button>
+    <button *ngIf="isEdit" (click)="changeEditMode(false)">Отменить</button>
+  </div>
+</div>

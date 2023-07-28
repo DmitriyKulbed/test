@@ -1,0 +1,16 @@
+<div class="projects-list">
+  <div
+    *ngFor="let project of projects"
+    class="projects-list_item"
+    [ngClass]="{ selected: project.id === selectedProjectId }"
+    (click)="select(project)"
+  >
+    <div class="projects-list_item_date">
+      <span>{{ project.startDate | date: 'd MMMM y' }}</span>
+      -
+      <span>{{ project.endDate | date: 'd MMMM y' }}</span>
+    </div>
+    <span class="projects-list_item_subject">{{ project.subject }}</span>
+    <span class="projects-list_item_author">{{ project.createdBy }}</span>
+  </div>
+</div>

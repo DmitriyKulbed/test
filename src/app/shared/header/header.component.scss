@@ -1,0 +1,16 @@
+.header {
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 30px;
+    &_item {
+        font-size: 25px;
+        cursor: pointer;
+        margin-right: 30px;
+        color: rgba(0, 0, 0, 0.70);
+
+        &_selected {
+            text-decoration: underline;
+            color: black;
+        }
+    }
+}

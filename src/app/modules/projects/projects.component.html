@@ -1,0 +1,8 @@
+<div class="projects">
+  <app-projects-list
+    [projects]="projects"
+    (selectProject)="selectProject($event)"
+    [selectedProjectId]="selectedProject?.id"
+  ></app-projects-list>
+  <app-project-info [project]="selectedProject"></app-project-info>
+</div>
